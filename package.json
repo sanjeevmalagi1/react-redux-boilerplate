@@ -1,7 +1,7 @@
 {
-  "name": "webpackp-react-setup",
+  "name": "webpack-react-setup",
+  "description": "This is a boiler-plate template for react redux with webpack",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
