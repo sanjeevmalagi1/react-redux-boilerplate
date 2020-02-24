@@ -1,8 +1,12 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
+
+import { Link } from "react-router-dom";
 
 import { connect } from 'react-redux';
 
 import { addTodo } from '../actions/todoActions';
+
+import './Form.css';
 
 const Form = props => {
   const {
@@ -27,7 +31,7 @@ const Form = props => {
         />
         <input type='submit' value='Add Todo' />
       </form>
-      <ul>
+      <ul className='todos-list'>
         { todos.map(todo => <li key={todo.id}>{todo.text}</li>) }
       </ul>
     </>

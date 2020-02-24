@@ -1,10 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import rootReducer from './js/reducers'
 
-import Form from "./js/components/Form";
+import Routes from './routes';
 
 const store = createStore(
   rootReducer,
@@ -12,8 +17,10 @@ const store = createStore(
 );
 
 const wrapper = document.getElementById("container");
-wrapper ? ReactDOM.render(
+if(wrapper) {
+  ReactDOM.render(
   <Provider store={store}>
-    <Form />
+    <Routes />
   </Provider>, wrapper
-) : false;
+  )
+}
